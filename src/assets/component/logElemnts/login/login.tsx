@@ -29,7 +29,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   } else {
     try {
       
-      const res = await axios.post('https://whopayingg.onrender.comjwt/create/', login);
+      const res = await axios.post('https://whopayingg.onrender.com/jwt/create/', login);
       const { access } = res.data;
 
       

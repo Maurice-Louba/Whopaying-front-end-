@@ -133,7 +133,7 @@ const Mon_Profile = () => {
   useEffect(() => {
     const fetchData = () => {
       const token = localStorage.getItem("token");
-      axios.get(`https://whopayingg.onrender.comexpenses/${username}/`, {
+      axios.get(`https://whopayingg.onrender.com/expenses/${username}/`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
