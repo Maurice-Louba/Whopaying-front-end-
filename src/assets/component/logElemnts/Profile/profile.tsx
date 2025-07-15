@@ -101,7 +101,7 @@ const Mon_Profile = () => {
       if (!token) return;
       
       try {
-        const res = await axios.get(`https://whopayingg.onrender.comdebts/${username}/`, {
+        const res = await axios.get(`https://whopayingg.onrender.com/debts/${username}/`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setdebtsdata(res.data);
@@ -116,7 +116,7 @@ const Mon_Profile = () => {
   useEffect(() => {
     const fetchData = () => {
       const token = localStorage.getItem("token");
-      axios.get(`https://whopayingg.onrender.comgroups/${username}/`, {
+      axios.get(`https://whopayingg.onrender.com/groups/${username}/`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -445,7 +445,7 @@ const Mon_Profile = () => {
                               {groupsdata.map((data) => (
                                 <div key={data.id} className="grid grid-cols-4 p-3 items-center hover:bg-gray-50 transition-colors">
                                   <img 
-                                    src={`http://127.0.0.1:8001${data.avatar}`} 
+                                    src={`https://whopayingg.onrender.com${data.avatar}`} 
                                     alt={data.name} 
                                     className="w-8 h-8 rounded-full object-cover"
                                   />
@@ -679,7 +679,7 @@ const Mon_Profile = () => {
                     {groupsdata.slice(0, 3).map((data) => (
                       <div key={data.id} className="flex items-center p-3 border border-gray-100 rounded-lg">
                         <img 
-                          src={`http://127.0.0.1:8001${data.avatar}`} 
+                          src={`https://whopayingg.onrender.com${data.avatar}`} 
                           alt={data.name} 
                           className="w-10 h-10 rounded-full mr-3" 
                         />

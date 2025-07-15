@@ -128,7 +128,7 @@ const ConversationList = ({ onToggleSidebar }: { onToggleSidebar?: () => void })
             {/* Avatar */}
             <div className="relative mr-2 sm:mr-3 flex-shrink-0">
               <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-emerald-500 flex items-center justify-center text-white font-semibold">
-                <img  className="w-[35px] h-[35px] sm:w-[42px] sm:h-[42px] -translate-x-0.7 rounded-full" src={`http://127.0.0.1:8001${conversation.in_group.avatar}`}/>
+                <img  className="w-[35px] h-[35px] sm:w-[42px] sm:h-[42px] -translate-x-0.7 rounded-full" src={`https://whopayingg.onrender.com${conversation.in_group.avatar}`}/>
               </div>
               {conversation.isOnline && (
                 <div className="absolute bottom-0 right-0 w-2 h-2 sm:w-3 sm:h-3 bg-green-400 rounded-full border-2 border-white"></div>
