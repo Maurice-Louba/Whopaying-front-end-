@@ -1,0 +1,36 @@
+Date : 2025-07-11 22:04:44
+Directory : c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\Profile
+Total : 7 files,  602 codes, 31 comments, 161 blanks, all 794 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| TypeScript JSX |          7 |        602 |         31 |        161 |        794 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                 | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                    |          7 |        602 |         31 |        161 |        794 |
+| . (Files)                                                                                                            |          6 |        813 |         32 |        185 |      1,030 |
+| ..                                                                                                                   |          1 |       -211 |         -1 |        -24 |       -236 |
+| ..\..                                                                                                                |          1 |       -211 |         -1 |        -24 |       -236 |
+| ..\..\Creation                                                                                                       |          1 |       -211 |         -1 |        -24 |       -236 |
+| ..\..\Creation\CreationGroup                                                                                         |          1 |       -211 |         -1 |        -24 |       -236 |
++----------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                                                             | language       | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\Creation\CreationGroup\CreationGroup.tsx | TypeScript JSX |       -211 |         -1 |        -24 |       -236 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\Profile\Autre.tsx             | TypeScript JSX |         73 |         10 |         22 |        105 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\Profile\DateDisplay.tsx       | TypeScript JSX |         12 |          0 |          2 |         14 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\Profile\Navbarmobile.tsx      | TypeScript JSX |         64 |          5 |         20 |         89 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\Profile\Toutprofil.tsx        | TypeScript JSX |          9 |          1 |          6 |         16 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\Profile\navbar.tsx            | TypeScript JSX |         27 |          0 |          5 |         32 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\Profile\profile.tsx           | TypeScript JSX |        628 |         16 |        130 |        774 |
+| Total                                                                                                                |                |        602 |         31 |        161 |        794 |
++----------------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+

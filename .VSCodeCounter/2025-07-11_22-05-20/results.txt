@@ -1,0 +1,50 @@
+Date : 2025-07-11 22:05:20
+Directory : c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component
+Total : 15 files,  1478 codes, 33 comments, 318 blanks, all 1829 lines
+
+Languages
++----------------+------------+------------+------------+------------+------------+
+| language       | files      | code       | comment    | blank      | total      |
++----------------+------------+------------+------------+------------+------------+
+| TypeScript JSX |         15 |      1,478 |         33 |        318 |      1,829 |
++----------------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                      | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                         |         15 |      1,478 |         33 |        318 |      1,829 |
+| Creation                                                                                                                                  |          1 |        211 |          1 |         24 |        236 |
+| Creation\CreationGroup                                                                                                                    |          1 |        211 |          1 |         24 |        236 |
+| ProfilElement                                                                                                                             |          2 |         61 |          0 |         16 |         77 |
+| ProfilElement (Files)                                                                                                                     |          1 |          9 |          0 |          5 |         14 |
+| ProfilElement\InformationsPersonnel                                                                                                       |          1 |         52 |          0 |         11 |         63 |
+| logElemnts                                                                                                                                |         12 |      1,206 |         32 |        278 |      1,516 |
+| logElemnts (Files)                                                                                                                        |          2 |         14 |          0 |         15 |         29 |
+| logElemnts\Profile                                                                                                                        |          6 |        813 |         32 |        185 |      1,030 |
+| logElemnts\SingUp                                                                                                                         |          1 |        145 |          0 |         19 |        164 |
+| logElemnts\VerifyEmail                                                                                                                    |          1 |        117 |          0 |         12 |        129 |
+| logElemnts\login                                                                                                                          |          2 |        117 |          0 |         47 |        164 |
++-------------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| filename                                                                                                                                  | language       | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\Creation\CreationGroup\CreationGroup.tsx                      | TypeScript JSX |        211 |          1 |         24 |        236 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\ProfilElement\InformationsPersonnel\InformationsPersonnel.tsx | TypeScript JSX |         52 |          0 |         11 |         63 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\ProfilElement\ToutprofilElement.tsx                           | TypeScript JSX |          9 |          0 |          5 |         14 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\Profile\Autre.tsx                                  | TypeScript JSX |         73 |         10 |         22 |        105 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\Profile\DateDisplay.tsx                            | TypeScript JSX |         12 |          0 |          2 |         14 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\Profile\Navbarmobile.tsx                           | TypeScript JSX |         64 |          5 |         20 |         89 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\Profile\Toutprofil.tsx                             | TypeScript JSX |          9 |          1 |          6 |         16 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\Profile\navbar.tsx                                 | TypeScript JSX |         27 |          0 |          5 |         32 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\Profile\profile.tsx                                | TypeScript JSX |        628 |         16 |        130 |        774 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\SingUp\SingUp.tsx                                  | TypeScript JSX |        145 |          0 |         19 |        164 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\Test.tsx                                           | TypeScript JSX |          7 |          0 |          5 |         12 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\Toutlogin.tsx                                      | TypeScript JSX |          7 |          0 |         10 |         17 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\VerifyEmail\VerfyEmail.tsx                         | TypeScript JSX |        117 |          0 |         12 |        129 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\login\login.tsx                                    | TypeScript JSX |        109 |          0 |         42 |        151 |
+| c:\Mes minis projets\Whopaying\FrontEnd\whopayingFront\src\assets\component\logElemnts\login\test.tsx                                     | TypeScript JSX |          8 |          0 |          5 |         13 |
+| Total                                                                                                                                     |                |      1,478 |         33 |        318 |      1,829 |
++-------------------------------------------------------------------------------------------------------------------------------------------+----------------+------------+------------+------------+------------+
