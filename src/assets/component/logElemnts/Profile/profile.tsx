@@ -16,52 +16,20 @@ import { IoMdArrowDropup } from "react-icons/io";
 import { LuPhone } from "react-icons/lu";
 import { MdOutlineDriveFileRenameOutline } from "react-icons/md";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router";
+import { useParams } from "react-router";
 import vide from '../../../photo/profil/Rien.jpg'
 import group from '../../../photo/profil/11450268-removebg-preview.png'
 import axios from "axios";
 import DateDisplay from "./DateDisplay";
 import CreationGroup from "../../Creation/CreationGroup/CreationGroup";
 
-interface UserData {
-  username: string;
-  email: string;
-  first_name: string;
-  last_name: string;
-  bio: string;
-}
-
-interface DebtData {
-  id: number;
-  created_at: string;
-  debtor: { username: string };
-  creditor: { username: string };
-  amount: number;
-  group: { name: string };
-}
-
-interface GroupData {
-  id: number;
-  name: string;
-  avatar: string;
-  created_date: string;
-}
-
-interface ExpenseData {
-  id: number;
-  user_depenced: { username: string };
-  group: { name: string };
-  amount: number;
-  description: string;
-  date: string;
-}
-
 const Mon_Profile = () => {
-  const { username } = useParams<{ username: string }>();
-  const [utidonne, setutidonne] = useState<UserData>({} as UserData);
+  const { username } = useParams();
+  const [utidonne, setutidonne] = useState({});
   const [parametregroupe, setparametregroupe] = useState(false);
-  const [debtsdata, setdebtsdata] = useState<DebtData[]>([]);
-  const [expensesdata, setexpensesdata] = useState<ExpenseData[]>([]);
+  const [debtsdata, setdebtsdata] = useState([]);
+  const [expensesdata, setexpensesdata] = useState([]);
   const [appearnewgroup, setappearnewgroup] = useState(false);
   const [nav, setNav] = useState(false);
   const [changeEtat, setchangeEtat] = useState('a');
@@ -69,8 +37,7 @@ const Mon_Profile = () => {
   const [defil1, setdefil1] = useState(true);
   const [defil2, setdefil2] = useState(true);
   const [defil3, setdefil3] = useState(true);
-  const [groupsdata, setgroupsdata] = useState<GroupData[]>([]);
-  const [showMenu, setShowMenu] = useState(false);
+  const [groupsdata, setgroupsdata] = useState([]);
   
   const navigate = useNavigate();
 
@@ -105,7 +72,7 @@ const Mon_Profile = () => {
   const handleNav = () => {
     setNav(!nav);
   };
-
+  const [showMenu,setShowMenu]=useState(false)
   // Fetch user data
   useEffect(() => {
     const Datafetch = async () => {
@@ -116,7 +83,7 @@ const Mon_Profile = () => {
       }
       
       try {
-        const res = await axios.get(`https://whopayingg.onrender.com/${username}/infos/`, {
+        const res = await axios.get(`https://whopaying-o9dg.onrender.com/${username}/infos/`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setutidonne(res.data);
@@ -134,7 +101,7 @@ const Mon_Profile = () => {
       if (!token) return;
       
       try {
-        const res = await axios.get(`https://whopayingg.onrender.com/debts/${username}/`, {
+        const res = await axios.get(`https://whopaying-o9dg.onrender.comdebts/${username}/`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setdebtsdata(res.data);
@@ -147,32 +114,34 @@ const Mon_Profile = () => {
 
   // Fetch groups data
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = () => {
       const token = localStorage.getItem("token");
-      try {
-        const res = await axios.get(`https://whopayingg.onrender.com/groups/${username}/`, {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+      axios.get(`https://whopaying-o9dg.onrender.comgroups/${username}/`, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .then((res) => {
         setgroupsdata(res.data);
-      } catch (err) {
-        console.error(err);
-      }
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
     };
     fetchData();
   }, [username]);
 
   // Fetch expenses data
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = () => {
       const token = localStorage.getItem("token");
-      try {
-        const res = await axios.get(`https://whopayingg.onrender.com/expenses/${username}/`, {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+      axios.get(`https://whopaying-o9dg.onrender.comexpenses/${username}/`, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .then((res) => {
         setexpensesdata(res.data);
-      } catch (err) {
-        console.error(err);
-      }
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
     };
     fetchData();
   }, [username]);
@@ -476,7 +445,7 @@ const Mon_Profile = () => {
                               {groupsdata.map((data) => (
                                 <div key={data.id} className="grid grid-cols-4 p-3 items-center hover:bg-gray-50 transition-colors">
                                   <img 
-                                    src={data.avatar || group} 
+                                    src={`http://127.0.0.1:8001${data.avatar}`} 
                                     alt={data.name} 
                                     className="w-8 h-8 rounded-full object-cover"
                                   />
@@ -710,7 +679,7 @@ const Mon_Profile = () => {
                     {groupsdata.slice(0, 3).map((data) => (
                       <div key={data.id} className="flex items-center p-3 border border-gray-100 rounded-lg">
                         <img 
-                          src={data.avatar || group} 
+                          src={`http://127.0.0.1:8001${data.avatar}`} 
                           alt={data.name} 
                           className="w-10 h-10 rounded-full mr-3" 
                         />
@@ -764,40 +733,41 @@ const Mon_Profile = () => {
           </div>
 
           {/* New Group Button */}
-          <div className="fixed bottom-6 right-6 flex flex-col items-end">
-            {/* Menu options that appear around the button */}
-            {showMenu && (
-              <div className="mb-3 bg-white rounded-lg shadow-lg p-3 w-48">
-                <ul className="space-y-2 text-sm">
-                  <li 
-                    className="p-2 hover:bg-green-50 rounded-md cursor-pointer transition-colors"
-                    onClick={()=>navigate(`/profil/${username}/new-group`)}
-                  >
-                    Create a Group
-                  </li>
-                  <li 
-                    className="p-2 hover:bg-green-50 rounded-md cursor-pointer transition-colors"
-                    onClick={()=>navigate(`/profil/${username}/new-debts`)}
-                  >
-                    Create a Debt
-                  </li>
-                  <li 
-                    className="p-2 hover:bg-green-50 rounded-md cursor-pointer transition-colors"
-                  >
-                    Create an Expense
-                  </li>
-                </ul>
-              </div>
-            )}
-            
-            {/* Main floating button */}
-            <button 
-              onClick={() => setShowMenu(!showMenu)}
-              className="bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition-all transform hover:scale-105"
-            >
-              <IoCreateOutline size={24} />
-            </button>
-          </div>
+<div className="fixed bottom-6 right-6 flex flex-col items-end">
+  {/* Menu options that appear around the button */}
+  {showMenu && (
+    <div className="mb-3 bg-white rounded-lg shadow-lg p-3 w-48">
+      <ul className="space-y-2 text-sm">
+        <li 
+          className="p-2 hover:bg-green-50 rounded-md cursor-pointer transition-colors"
+          onClick={()=>navigate(`/profil/${username}/new-group`)}
+        >
+          Create a Group
+        </li>
+        <li 
+          className="p-2 hover:bg-green-50 rounded-md cursor-pointer transition-colors"
+          onClick={()=>navigate(`/profil/${username}/new-debts`)}
+        >
+          Create a Debt
+        </li>
+        <li 
+          className="p-2 hover:bg-green-50 rounded-md cursor-pointer transition-colors"
+          
+        >
+          Create an Expense
+        </li>
+      </ul>
+    </div>
+  )}
+  
+  {/* Main floating button */}
+  <button 
+    onClick={() => setShowMenu(!showMenu)}
+    className="bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition-all transform hover:scale-105"
+  >
+    <IoCreateOutline size={24} />
+  </button>
+</div>
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@ const InformationsPersonnel = () => {
       return;
 
         }
-       const res = axios.get(`https://whopayingg.onrender.comprofil/${username}/infos/`,
+       const res = axios.get(`https://whopaying-o9dg.onrender.comprofil/${username}/infos/`,
         {
     headers: {
     Authorization: `Bearer ${token}`,

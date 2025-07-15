@@ -39,7 +39,7 @@ const ChatApp = () => {
     const fetchMessages = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get(`https://whopayingg.onrender.comconversation_details/${conversation}/`, {
+        const res = await axios.get(`https://whopaying-o9dg.onrender.comconversation_details/${conversation}/`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -120,7 +120,7 @@ const ChatApp = () => {
     }
           
     try {
-      const res = await axios.get(`https://whopayingg.onrender.comprofil/${username}/infos/`, {
+      const res = await axios.get(`https://whopaying-o9dg.onrender.comprofil/${username}/infos/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -160,7 +160,7 @@ const handlesubbmit = async (e: React.FormEvent<HTMLFormElement>) => {
   try {
     const token = localStorage.getItem("token");
     const res = await axios.post(
-      `https://whopayingg.onrender.com/conversation_details/${conversation}/`,
+      `https://whopaying-o9dg.onrender.com/conversation_details/${conversation}/`,
       Donnee,
       {
         headers: {
