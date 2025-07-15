@@ -30,7 +30,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     setError("All fields are required");
   } else {
     try {
-      const res = await axios.post("https://whopaying-o9dg.onrender.com/users/", formdata);
+      const res = await axios.post("https://whopayingg.onrender.com/users/", formdata);
 
       if (res.status === 201) {
         alert("Sign up successfully! Please check your email for the verification code.");

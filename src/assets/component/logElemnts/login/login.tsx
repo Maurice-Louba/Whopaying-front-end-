@@ -29,14 +29,14 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   } else {
     try {
       
-      const res = await axios.post('https://whopaying-o9dg.onrender.comjwt/create/', login);
+      const res = await axios.post('https://whopayingg.onrender.comjwt/create/', login);
       const { access } = res.data;
 
       
       localStorage.setItem("token", access);
 
       
-      const userRes = await axios.get("https://whopaying-o9dg.onrender.com/users/me/", {
+      const userRes = await axios.get("https://whopayingg.onrender.com/users/me/", {
         headers: {
           Authorization: `Bearer ${access}`
         }

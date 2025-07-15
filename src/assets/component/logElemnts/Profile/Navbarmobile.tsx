@@ -21,7 +21,7 @@ const Navbarmobile = () => {
       }
       
       try {
-        const res = await axios.get(`https://whopaying-o9dg.onrender.comprofil/${username}/infos/`, {
+        const res = await axios.get(`https://whopayingg.onrender.comprofil/${username}/infos/`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setutidonne(res.data);

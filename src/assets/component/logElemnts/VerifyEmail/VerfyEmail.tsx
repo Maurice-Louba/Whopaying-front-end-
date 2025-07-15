@@ -21,7 +21,7 @@ const VerifyEmail = () => {
 
   const getCSRFToken = async () => {
     try {
-      await axios.get("https://whopaying-o9dg.onrender.comcsrf/", { withCredentials: true });
+      await axios.get("https://whopayingg.onrender.comcsrf/", { withCredentials: true });
       console.log("✅ CSRF cookie fetched");
     } catch (error) {
       console.error("❌ CSRF error: ", error);
@@ -47,7 +47,7 @@ const VerifyEmail = () => {
       const csrfToken = getCookie("csrftoken") || "";
 
       const res = await axios.post(
-        "https://whopaying-o9dg.onrender.comverify-otp/",
+        "https://whopayingg.onrender.comverify-otp/",
         { otp_code, username },  // <-- username ajouté ici
         {
           withCredentials: true,

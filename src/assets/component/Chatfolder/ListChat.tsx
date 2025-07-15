@@ -44,7 +44,7 @@ const ConversationList = ({ onToggleSidebar }: { onToggleSidebar?: () => void })
     
     
     const token = localStorage.getItem("token");
-    const res = axios.get(`https://whopaying-o9dg.onrender.com/mes-conversations/${username}/`,
+    const res = axios.get(`https://whopayingg.onrender.com/mes-conversations/${username}/`,
         {
         headers: {
           Authorization: `Bearer ${token}`,

@@ -83,7 +83,7 @@ const Mon_Profile = () => {
       }
       
       try {
-        const res = await axios.get(`https://whopaying-o9dg.onrender.com/${username}/infos/`, {
+        const res = await axios.get(`https://whopayingg.onrender.com/${username}/infos/`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setutidonne(res.data);
@@ -101,7 +101,7 @@ const Mon_Profile = () => {
       if (!token) return;
       
       try {
-        const res = await axios.get(`https://whopaying-o9dg.onrender.comdebts/${username}/`, {
+        const res = await axios.get(`https://whopayingg.onrender.comdebts/${username}/`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setdebtsdata(res.data);
@@ -116,7 +116,7 @@ const Mon_Profile = () => {
   useEffect(() => {
     const fetchData = () => {
       const token = localStorage.getItem("token");
-      axios.get(`https://whopaying-o9dg.onrender.comgroups/${username}/`, {
+      axios.get(`https://whopayingg.onrender.comgroups/${username}/`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -133,7 +133,7 @@ const Mon_Profile = () => {
   useEffect(() => {
     const fetchData = () => {
       const token = localStorage.getItem("token");
-      axios.get(`https://whopaying-o9dg.onrender.comexpenses/${username}/`, {
+      axios.get(`https://whopayingg.onrender.comexpenses/${username}/`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
