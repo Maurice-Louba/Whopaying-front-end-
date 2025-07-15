@@ -83,7 +83,7 @@ const Mon_Profile = () => {
       }
       
       try {
-        const res = await axios.get(`https://whopayingg.onrender.com/${username}/infos/`, {
+        const res = await axios.get(`https://whopayingg.onrender.com/profil/${username}/infos/`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setutidonne(res.data);
