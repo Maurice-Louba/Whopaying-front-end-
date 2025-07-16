@@ -60,7 +60,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
 
   return (
-    <div className="min-h-screen   sm:-translate-x-20 my-10 flex  items-center justify-center bg-gradient-to-br ">
+    <div className="min-h-screen mx-4  px-10  sm:-translate-x-20 my-10 flex  items-center justify-center bg-gradient-to-br ">
       
 
               <div className="absolute hidden sm:flex w-70 h-70 bg-green-300 opacity-20 rounded-full -translate-y-100 -translate-x-100 "></div>
@@ -69,7 +69,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
          
 
           
-          <div data-aos="fade-up" className="bg-white hidden  sm:flex items-center justify-center sm:translate-x-90 sm:-translate-y-75  shadow-2xl w-[250px] h-[100px] sm:my-[-400px] rounded-bl-full rounded-tl-full rounded-tr-full rounded-br-full mx-[15px]">
+          <div data-aos="fade-up" className="bg-white hidden  sm:flex items-center justify-center sm:translate-x-90 sm:-translate-y-75  shadow-2xl sm:w-[250px] sm:h-[100px] sm:my-[-400px] rounded-bl-full rounded-tl-full rounded-tr-full rounded-br-full mx-[15px]">
             <div className="items-center flex justify-center">
               <img className="w-[100px] h-[100px]" src={img}/>
               <p></p>
@@ -79,7 +79,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       <div data-aos="fade-up" className="bg-white  p-8 rounded-2xl shadow-2xl w-full max-w-md">
 
 
-        <div  data-aos= "fade-up" className="bg-white sm:hidden  flex  items-center justify-center sm:translate-x-90 -translate-y-40  shadow-2xl w-[250px] h-[100px] sm:my-[-400px] rounded-bl-full rounded-tl-full rounded-tr-full rounded-br-full mx-[15px]">
+        <div  data-aos= "fade-up" className="bg-white sm:hidden mx-2  flex  items-center justify-center sm:translate-x-90 -translate-y-40  shadow-2xl w-[200px] h-[100px] sm:my-[-400px] rounded-bl-full rounded-tl-full rounded-tr-full rounded-br-full mx-[15px]">
             <div className="items-center flex justify-center">
               <img className="w-[100px] h-[100px]" src={img}/>
               <p></p>
@@ -136,7 +136,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       </div>
         <div >
           <div className="   w-[150px]  sm:mx-[-25px] mx-[-80px] cursor-pointer" >
-            <p className="sm:translate-y-70 sm:-translate-x-70 w:full -translate-x-50 translate-y-90 hover:text-green-700  text-green-600"><MdOutlineKeyboardBackspace className="my-[-22px] mx-[-20px] " /> Back to home page<br/><p className="text-gray-500">@2025. All rights reserved.<br/><p></p></p></p>
+            <p className="sm:translate-y-70 sm:-translate-x-70 w:full sl:-translate-x-50 translate-y-90 hover:text-green-700 -translate-x-37  text-green-600"><MdOutlineKeyboardBackspace className="my-[-22px] mx-[-20px] " /> Back to home page<br/><p className="text-gray-500">@2025. All rights reserved.<br/><p></p></p></p>
              
             
           </div>
