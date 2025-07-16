@@ -239,7 +239,7 @@ console.log(Donnee)
         <div className="flex items-center space-x-3">
           <div className="relative">
             <img
-              src={`http://127.0.0.1:8001${messages[0].conversation.in_group.avatar}`}
+              src={`https://whopayingg.onrender.com/${messages[0].conversation.in_group.avatar}`}
               alt="Group avatar"
               className="w-10 h-10 rounded-full object-cover"
             />
@@ -270,7 +270,7 @@ console.log(Donnee)
               >
                 {msg.sender.id!=utidonne.id && (
                   <div className="w-8 h-8 rounded-full bg-emerald-300 flex items-center justify-center text-white text-sm font-bold mr-2 mt-1">
-                    {/*msg.sender.username[0]*/} <img className="rounded-full" src={`http://127.0.0.1:8001${msg.sender.profile_picture}`} alt="photo envoyeur"/>
+                    {/*msg.sender.username[0]*/} <img className="rounded-full" src={`https://whopayingg.onrender.com/${msg.sender.profile_picture}`} alt="photo envoyeur"/>
                   </div>
                 )}
 
