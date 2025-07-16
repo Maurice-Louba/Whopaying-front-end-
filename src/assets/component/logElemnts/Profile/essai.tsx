@@ -39,7 +39,7 @@ const ChatApp = () => {
     const fetchMessages = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get(`https://whopayingg.onrender.comconversation_details/${conversation}/`, {
+        const res = await axios.get(`https://whopayingg.onrender.com/conversation_details/${conversation}/`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
