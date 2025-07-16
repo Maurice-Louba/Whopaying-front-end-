@@ -28,6 +28,9 @@ Une messagerie est également intégrée pour faciliter la communication entre l
 ### 💬 Messagerie en temps réel
 ![Chat](assets/messages.png)
 ![Chat](assets/list_message.png)
+## Version mobile
+![Home](assets/version.png)
+![Home](assets/version2.png)
 
 ---
 
