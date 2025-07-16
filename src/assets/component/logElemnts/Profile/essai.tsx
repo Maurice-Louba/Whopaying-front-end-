@@ -120,7 +120,7 @@ const ChatApp = () => {
     }
           
     try {
-      const res = await axios.get(`https://whopayingg.onrender.comprofil/${username}/infos/`, {
+      const res = await axios.get(`https://whopayingg.onrender.com/profil/${username}/infos/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
