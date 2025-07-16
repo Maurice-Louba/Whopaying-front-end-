@@ -239,7 +239,7 @@ console.log(Donnee)
         <div className="flex items-center space-x-3">
           <div className="relative">
             <img
-              src={`https://whopayingg.onrender.com/${messages[0].conversation.in_group.avatar}`}
+              src={`https://whopayingg.onrender.com${messages[0].conversation.in_group.avatar}`}
               alt="Group avatar"
               className="w-10 h-10 rounded-full object-cover"
             />
