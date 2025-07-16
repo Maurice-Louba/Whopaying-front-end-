@@ -30,7 +30,7 @@ const Autre = () => {
 
       try {
         const res = await axios.get(
-          `https://whopayingg.onrender.comprofil/${username}/infos/`,
+          `https://whopayingg.onrender.com/profil/${username}/infos/`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
