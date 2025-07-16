@@ -270,7 +270,7 @@ console.log(Donnee)
               >
                 {msg.sender.id!=utidonne.id && (
                   <div className="w-8 h-8 rounded-full bg-emerald-300 flex items-center justify-center text-white text-sm font-bold mr-2 mt-1">
-                    {/*msg.sender.username[0]*/} <img className="rounded-full" src={`https://whopayingg.onrender.com/${msg.sender.profile_picture}`} alt="photo envoyeur"/>
+                    {/*msg.sender.username[0]*/} <img className="rounded-full" src={`https://whopayingg.onrender.com${msg.sender.profile_picture}`} alt="photo envoyeur"/>
                   </div>
                 )}
 
