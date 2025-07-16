@@ -21,7 +21,7 @@ const VerifyEmail = () => {
 
   const getCSRFToken = async () => {
     try {
-      await axios.get("https://whopayingg.onrender.comcsrf/", { withCredentials: true });
+      await axios.get("https://whopayingg.onrender.com/csrf/", { withCredentials: true });
       console.log("✅ CSRF cookie fetched");
     } catch (error) {
       console.error("❌ CSRF error: ", error);
@@ -47,7 +47,7 @@ const VerifyEmail = () => {
       const csrfToken = getCookie("csrftoken") || "";
 
       const res = await axios.post(
-        "https://whopayingg.onrender.comverify-otp/",
+        "https://whopayingg.onrender.com/verify-otp/",
         { otp_code, username },  // <-- username ajouté ici
         {
           withCredentials: true,
@@ -79,7 +79,7 @@ const VerifyEmail = () => {
     <div>
       <div>
         <div className='w-full rounded-tl-2xl rounded-tr-2xl h-[350px] bg-green-50'>
-          <div className='mx-[98px] md:mx-[500px]'>
+          <div className= 'items-center flex justify-center mx-[98px] md:mx-[500px]'>
             <img src={logo} className='w-[150px] h-[150px]' alt="Logo" />
           </div>
           <div className='items-center justify-center flex'>
@@ -87,14 +87,16 @@ const VerifyEmail = () => {
               <div className='justify-center flex items-center'>
                 <img src={reçu} className='w-[150px] h-[150px]' alt="Verify" />
               </div>
+              <div className='sm:flex sm:justify-center sm:items-center'>
               <h1 className='md:text-4xl text-3xl font-medium'>Confirm your Email</h1>
+              </div>
               <p className='text-2xl text-red-400'>{mes}</p>
-              <form onSubmit={handleSubmit}>
-                <div className="relative my-7">
-                  <MdEmail className="absolute top-1/2 md:left-57 left-15 transform -translate-y-1/2 text-gray-400" />
+              <form className='justify-center  items-center' onSubmit={handleSubmit}>
+                <div className=" flex justify-center items-center relative my-7">
+                  <MdEmail className=" sm:mx-35 flex justify-center items-center absolute top-1/2 md:left-57 left-15 mx-5 transform -translate-y-1/2 text-gray-400" />
                   <input
                     type="text"
-                    placeholder="Enter the verification code"
+                    placeholder="Enter the verification co.."
                     name="otp_code"
                     value={otp_code}
                     onChange={handleOnChange}
@@ -102,7 +104,10 @@ const VerifyEmail = () => {
                     required
                   />
                 </div>
-                <p className='text-gray-400 p-1'>Enter the code received by email to confirm your identity</p>
+                <div className='flex items-center justify-center mx-15'>
+                <p className=' text-gray-400 p-1'>Enter the code received by email to confirm your identity</p>
+                </div>
+                <div className='flex items-center justify-center'>
                 <button
                   type="submit"
                   disabled={!otp_code}
@@ -111,15 +116,18 @@ const VerifyEmail = () => {
                 >
                   Send
                 </button>
+                </div>
                 <div className="md:block hidden">
-                  <a href='/'><p className="text-green-600 cursor-pointer -translate-y-2"><MdOutlineKeyboardBackspace className='translate-x-128 translate-y-5' />Back</p></a>
+                  <a href='/'><p className="text-green-600 cursor-pointer  -translate-y-2"><MdOutlineKeyboardBackspace className='sm:translate-x-165 translate-x-128 translate-y-5' /><p className='sm:translate-x-170'>Back</p></p></a>
                 </div>
               </form>
             </div>
           </div>
         </div>
-        <div className='w-full rounded-bl-2xl rounded-br-2xl h-[350px] bg-green-600'></div>
-        <p className='text-gray-400 my-7'>@Copyright, 2025. All right reserved</p>
+        <div className='  w-full rounded-bl-2xl rounded-br-2xl h-[350px] bg-green-600'></div>
+        <div>
+        <p className='flex items-center justify-center text-gray-400 my-7'>@Copyright, 2025. All right reserved</p>
+      </div>
       </div>
     </div>
   );
