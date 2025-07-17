@@ -1,69 +1,63 @@
-# React + TypeScript + Vite
+# 💸 Whopaying – Gestion de dépenses en groupe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Whopaying est une application web collaborative qui permet à plusieurs utilisateurs de suivre, partager et équilibrer leurs dépenses communes en temps réel.  
+Une messagerie est également intégrée pour faciliter la communication entre les membres.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Fonctionnalités principales
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- ✅ Création de groupes de dépenses
+- ✅ Ajout de transactions partagées
+- ✅ Calcul automatique des soldes entre membres
+- ✅ Messagerie instantanée intégrée (via Django)
+- ✅ Authentification sécurisée par JWT
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📸 Aperçu de l'application
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+###  login page
+![Home](assets/login.png)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 🖼️ Page d'accueil
+![Dashboard](assets/menu.png)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 💬 Messagerie en temps réel
+![Chat](assets/messages.png)
+![Chat](assets/list_message.png)
+## Version mobile
+![Home](assets/version.png)
+![Home](assets/version2.png)
+
+---
+
+## 🛠️ Technologies utilisées
+
+- **Frontend** : React.js, TailwindCSS
+- **Backend** : Django & Django REST Framework
+- **Auth** : JWT (via `djoser + simplejwt`)
+- **Chat** : Canal WebSocket Django (ou API selon implémentation)
+- **Base de données** : SQLite (dev) / PostgreSQL (prod)
+- **Déploiement** : Render
+
+---
+
+## 🧪 Lancer en local
+
+```bash
+# Cloner le dépôt
+git clone https://github.com/tonusername/whopaying.git
+cd whopaying
+
+# Lancer le backend
+cd backend
+pip install -r requirements.txt
+python manage.py runserver
+
+# Lancer le frontend
+cd ../frontend
+npm install
+npm run dev
